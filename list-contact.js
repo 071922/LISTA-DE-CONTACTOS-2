@@ -47,7 +47,28 @@ const AgregarContacto = (id,nombre,apellido,telefono,ciudad,direccion) => {
     
     AgregarContacto("1032456765","Camila","Salamanca",3245647799,"Medellín","Calle 32 54-33");
     
+    
     const EliminarContacto = NameList.filter(eliminar => eliminar.Nombre === 'Juan')
 
      console.log(EliminarContacto)
     
+
+    const EditarContacto = (id,nombre,apellido,telefono,ciudad,direccion) => {
+
+        let NewContact = {
+        
+            id: id,
+            nombre: nombre,
+            apellido: apellido,
+            telefono: telefono,
+            ubicacion: {ciudad:ciudad,direccion:direccion}
+        
+        }
+        
+        console.log(NewContact);
+        NameList.push(NewContact);
+        return console.log(NameList);
+        
+        }
+        
+        EditarContacto("1032456765","Camila","Salamanca",3245647799,"Medellín","cra 25 45-15");
